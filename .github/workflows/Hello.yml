@@ -1,0 +1,27 @@
+name: Hello world workflow
+
+on: 
+  push: 
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Print hello world
+        run: echo "Hello world"
+        shell: bash
+
+  Welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print goodbye world
+        run: echo "Welcome to NVPT"
+        shell: bash
